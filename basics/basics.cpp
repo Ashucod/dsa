@@ -68,5 +68,35 @@ int main() {
     // int len = s.size(); // length is 6
     // cout << "Last alphabet is : " << s[len-1] << "\n";
 
+
+    // Functions
+    // void function --> doesnt return any value
+    // return function --> returns a value
+    // parameterized function --> accepts some parameters/inputs
+    // non parameterized function --> doest accept any parameters/inputs
+
+    // return_type fun_name(parameters) {
+    //      return __ ;
+    // }
+
+    // parameters may be of any data types like a function can accept multiple data types at same time
+    // a function with a return type is always called by assigning with the same type of variable
+    // a void function can be called directly;
+    // a function can do only one task. It can either print an output or it can return a value by doing some operations.
+    // if a function is declared to return some value and there is no return statement, it will return a gabage value;
+
+    // PASS BY VALUE
+    // the original variable is not sent or the address is not sent only the value of the variable is sent to the function.
+    // when we pass a variable inside a function, it makes a copy of the things inside the variable and sends it to the functions parameters.
+
+    // PASS BY REFERENCE means i am sending the same variable along with its address to the function;
+    // so operations done in the function on the vaiable will change the original value of the variable.
+    // to do pass by reference we just add a '&' symbol just before the parameter name
+    // EXAMPLE
+    // void doSomething(int &num)
+    // & just tells that to take the variable along with the address and not just the value of the variable by making a copy of it
+
+    // IMP: Arrays are always passed with reference, so no need to add the & symbol
+
     return 0;
 }
