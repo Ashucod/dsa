@@ -33,6 +33,23 @@ void pat3(int n) {
     }
 }
 
+// if vertical numbers are same in the pattern then just replace * with column ie j
+// if horizontal numbers are same in the paatern then just replace * with row ie i
+
+// hollow square pattern
+void pat4(int n) {
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= n; j++) {
+            if (i == 1 || i == n || j == 1 || j == n) {
+                cout << " * ";
+            } else {
+                cout << "   ";
+            }
+        }
+        cout << endl;
+    }
+}
+
 int main() {
     int t;
     cout << "Enter no. of test cases : ";
@@ -40,7 +57,7 @@ int main() {
     for (int i = 1; i <= t; i++) {
         int n;
         cin >> n;
-        pat3(n);
+        pat4(n);
     }
 
 }
