@@ -50,6 +50,50 @@ void pat4(int n) {
     }
 }
 
+// pyramid star pattern
+void pat5(int n) {
+    // space-star-space
+    for (int i = 0; i < n; i++) {
+        // space
+        for (int j = 0; j < n-i; j++) {
+            cout << "   ";
+        }
+        // stars
+        for (int j = 0; j < (2*i + 1); j++) {
+            cout << " * ";
+        }
+        // space
+        for (int j = 0; j < n-i; j++) {
+            cout << "   ";
+        }
+
+        cout << endl;
+    }
+}
+
+// inverted pyramid star pattern
+void pat6(int n) {
+    // space-star-space
+    for (int i = 0; i < n; i++) {
+        // space
+        for (int j = 0; j < i; j++) {
+            cout << "   ";
+        }
+
+        // stars
+        for (int j = 0; j < (2*(n-i) - 1); j++) {
+            cout << " * ";
+        }
+
+        // space
+        for (int j = 0; j < i; j++) {
+            cout << "   ";
+        }
+
+        cout << endl;
+    }
+}
+
 int main() {
     int t;
     cout << "Enter no. of test cases : ";
@@ -57,7 +101,7 @@ int main() {
     for (int i = 1; i <= t; i++) {
         int n;
         cin >> n;
-        pat4(n);
+        pat6(n);
     }
 
 }
