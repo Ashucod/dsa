@@ -53,7 +53,22 @@ int main() {
     vec.insert(vec.begin() + 1, 2, 10); // {300, 10, 10, 100, 100}
     // the above says add from begin()+1 position 2 instances of 10
 
-    
+    // to print size of vector
+    cout << vec.size() << endl;
+
+    // to erase last element
+    vec.pop_back();
+    for(auto it : vec) {
+        cout << it << " ";
+    }
+    cout << endl;
+
+    // v1.swap(v2) => swaps both the vectors
+
+    // v.clear() => erases the entire vector
+
+    cout << v.empty() << endl; // returns 0 if false ie when vector is not empty and returns 1 if true ie when vector is empty
+
 
     return 0;
 }
