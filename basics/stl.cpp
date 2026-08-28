@@ -61,9 +61,6 @@ void explainVector() {
     // rbegin(): Returns a reverse iterator to the beginning of container.
     vector<int>::iterator it = v.rbegin();
     
-    
-
-    
 
 }
 
