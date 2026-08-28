@@ -42,6 +42,8 @@ void explainVector() {
 
     // Iterator
     // An iterator is like an object that behaves like a pointer to traverse and access elements of container
+
+    // begin(): Returns an iterator to the beginning of container
     vector<int>::iterator it = v.begin();
     // it points to the memory of the element of container and to access we use a * before it
     it++;
@@ -50,7 +52,17 @@ void explainVector() {
     it = it + 2;
     cout << *(it) << " ";
 
+    // end(): Returns an iterator to the theoretical element just after the last element of the container.
+    vector<int>::iterator it = v.end();
+
+    // rend(): Returns a reverse iterator to the theoretical element just after the last element of the container.
+    vector<int>::iterator it = v.rend();
+
+    // rbegin(): Returns a reverse iterator to the beginning of container.
+    vector<int>::iterator it = v.rbegin();
     
+    
+
     
 
 }
