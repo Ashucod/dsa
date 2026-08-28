@@ -40,7 +40,17 @@ void explainVector() {
     vector<int> v1(5, 20);
     vector<int> v2(v1); // copies vector v1 to v2
 
+    // Iterator
+    // An iterator is like an object that behaves like a pointer to traverse and access elements of container
+    vector<int>::iterator it = v.begin();
+    // it points to the memory of the element of container and to access we use a * before it
+    it++;
+    cout << *(it) << " ";
 
+    it = it + 2;
+    cout << *(it) << " ";
+
+    
     
 
 }
