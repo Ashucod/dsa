@@ -28,6 +28,31 @@ int main() {
 
     cout << endl;
 
+
+    // Ways to delete elements from a vector
+    // {10, 20, 30, 40}
+    // To delete a single element at a time
+    v.erase(v.begin() + 1); // To delete 20
+    for(auto it : v) {
+        cout << it << " ";
+    }
+    cout << endl;
+
+    // To delete a range of elements
+    v.push_back(20);
+    // {10, 30, 40, 20}
+    v.erase(v.begin()+1 , v.begin()+3); // deletes elements from [start, end) ie 30, 40 will be deleted and not 20
+    for(auto it : v) {
+        cout << it << " ";
+    }
+    cout << endl;
+
+    // Insert function
+    vector<int> vec(2, 100); // {100, 100}
+    vec.insert(vec.begin(), 300); // {300, 100, 100}
+    vec.insert(vec.begin() + 1, 2, 10); // {300, 10, 10, 100, 100}
+    // the above says add from begin()+1 position 2 instances of 10
+
     
 
     return 0;
