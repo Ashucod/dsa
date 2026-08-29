@@ -35,9 +35,41 @@ int reverse(int n) {
     return num; 
 }
 
+void isPalindrome(int n) {
+    // REVERSED NUMBER == ORIGINAL NUMBER --> PALINDROME NUMBER     
+    int num = n, rev_num = 0, d;
+    while(n > 0) {
+        d = n % 10;
+        rev_num = rev_num*10 + d;
+        n = n / 10;
+    }
+
+    if(rev_num == num) {
+        cout << num << " is a palindrome number" << endl;
+    } else {
+        cout << num << " is not a palindrome number" << endl;
+    }
+}
+
+void isAmstrong(int n) {
+    int num = n, dig, sum = 0;
+    while(n > 0) {
+        dig = n % 10;
+        sum = sum + (dig*dig*dig); 
+        n = n / 10;
+    }
+
+    if(sum == num) {
+        cout << num << " is an amstrong number" << endl;
+    } else {
+        cout << num << " is not an amstrong number" << endl;
+    }
+}
+
 int main() {
     cout << "Number of digits in 7789 are " << count(7789) << endl;
     cout << "Addition of digits of number 7789 is " << add_digits(7789) << endl;
     cout << "The number 7789 when reversed looks like " << reverse(7789) << endl;
-
+    isPalindrome(121);
+    isAmstrong(371);
 }
