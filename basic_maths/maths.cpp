@@ -120,6 +120,20 @@ void isPrime(int n) {
     else cout << n << " is not a prime number." << endl;
 }
 
+int gcd(int x, int y) {
+    int gcd = 0, n;
+    if (x < y) n = x;
+    else if (x > y) n = y;
+    else return x;
+
+    for(int i = 1; i <= n; i++) {
+        if (x % i == 0 && y % i == 0) {
+            if(i >= gcd) gcd = i;
+        }
+    }
+    return gcd;
+}
+
 int main() {
     cout << "Number of digits in 7789 are " << count(7789) << endl;
     cout << "Addition of digits of number 7789 is " << add_digits(7789) << endl;
@@ -128,4 +142,5 @@ int main() {
     isAmstrong(371);
     divisors(36);
     isPrime(19);
+    cout << "GCD of 9 & 12 is " << gcd(18, 12) << endl;
 }
