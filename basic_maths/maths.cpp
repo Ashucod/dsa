@@ -66,10 +66,21 @@ void isAmstrong(int n) {
     }
 }
 
+void divisors(int n) {
+    cout << "Divisors of " << n << " are ";
+    for (int i = 1; i <= n; i++) {
+        if (n % i == 0){
+            cout << i << " ";
+        }
+    }
+    cout << endl;
+}
+
 int main() {
     cout << "Number of digits in 7789 are " << count(7789) << endl;
     cout << "Addition of digits of number 7789 is " << add_digits(7789) << endl;
     cout << "The number 7789 when reversed looks like " << reverse(7789) << endl;
     isPalindrome(121);
     isAmstrong(371);
+    divisors(36);
 }
