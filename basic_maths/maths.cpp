@@ -107,6 +107,19 @@ void divisors(int n) {
     cout << endl;
 }
 
+void isPrime(int n) {
+    int c = 0;
+    for(int i = 1; i*i <= n; i++) {
+        if(n % i == 0){
+            c++;
+            if((n/i) != i) c++;
+        }
+    }
+
+    if (c == 2 || n == 1) cout << n << " is a prime number." << endl;
+    else cout << n << " is not a prime number." << endl;
+}
+
 int main() {
     cout << "Number of digits in 7789 are " << count(7789) << endl;
     cout << "Addition of digits of number 7789 is " << add_digits(7789) << endl;
@@ -114,4 +127,5 @@ int main() {
     isPalindrome(121);
     isAmstrong(371);
     divisors(36);
+    isPrime(19);
 }
