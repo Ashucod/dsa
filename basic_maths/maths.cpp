@@ -126,6 +126,7 @@ int gcd(int x, int y) {
     else if (x > y) n = y;
     else return x;
 
+    // we can also use the min(x, y) function without following the above steps
     for(int i = 1; i <= n; i++) {
         if (x % i == 0 && y % i == 0) {
             if(i >= gcd) gcd = i;
