@@ -49,7 +49,7 @@ int main() {
     int arr[] = { 1, 2, 3, 4, 5};
     int n = sizeof(arr)/sizeof(int);
     string s = "Madam";
-    int ns = sizeof(s)/sizeof(char);
+    int ns = s.size();
     // reverse_arr(0, n-1, arr);   
     // Remember arrays are passed by reference by default
     
