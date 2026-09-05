@@ -44,13 +44,14 @@ int main() {
 
     // arrays are examples of static memory whereas vectors are examples of dynamic memory
     
-    // How are vectors stored in the memory?
+    // How are vectors stored in the memory? OR how vector works in internal memory?
+
     // assume we execute v.push_back(0) in an empty vector, then in the memory an array of size 1 is created and value 0 is stored in it
     // now if we again v.push_back(1), then the value tries to get in the initial array of size 1 but since its full, now the size of array gets doubled to 2 and then 0 and 1 both are stored in it and the previous array of size 1 gets deleted. this procees gets done automatically
     // now if we again v.push_back(2), then the value again tries to get in the previous array of size 2 but since its full, now the size of array again gets doubled to 4 and then the values 0,1,2 get stores in it and the previous array of size 2 gets deleted and this new array of size 4 is formed.
     // now here if we print the size of the vector it will show 3 but if we print the capacity it will be 4. so not size but the capacity gets doubled whenever there is no spcae left for the upcoming number
 
-
+    
 
 
     return 0;
