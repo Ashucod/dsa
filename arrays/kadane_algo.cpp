@@ -24,19 +24,30 @@ int main() {
     // so now the question was maximum subarray sum ie which subarray has maximum sum
 
     // so we use here brute-force methos but the time-complexity would be optimized to O(n^2)
+
     // since the second loop one with the end as its counter variable pointing to the end value, we will just add the end element to the previous sum and not find the sum by always adding all those numbers
 
-    int maxSum = INT_MIN;
-    for(int start = 0; start < n; start++) {
-        int currentSum = 0;
-        for(int end = start; end < n; end++) {
-            currentSum += a[end];
-            maxSum = max(currentSum, maxSum);
-        }
+    // int maxSum = INT_MIN;
+    // for(int start = 0; start < n; start++) {
+    //     int currentSum = 0;
+    //     for(int end = start; end < n; end++) {
+    //         currentSum += a[end];
+    //         maxSum = max(currentSum, maxSum);
+    //     }
+    // }
+
+    // cout << "Maximum subarray sum : " << maxSum << endl;
+
+    // Now to optimize it more we use KADANE'S algorithm
+    
+    int currentSum = 0, maxSum = INT_MIN;
+    for(int i = 0; i < n; i++){
+        currentSum += a[i];
+        maxSum = max(currentSum, maxSum);
+        if(currentSum < 0) currentSum = 0;
     }
 
     cout << "Maximum subarray sum : " << maxSum << endl;
-
 
     return 0;
 } 
