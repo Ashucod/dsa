@@ -25,7 +25,36 @@ int main() {
     // so to do this first we should know which numbers can the user ask like user can ask for occurence of any number between 0 to 12.
     // when we get to know this, we will just create a hash array of size 13 and proceed as discussed above
 
-    
+    // input structure:
+    // size of array
+    // array input
+    // number of query
+    // queries one by one
+
+    int n;
+    cin >> n;
+    int arr[n];
+
+    for(int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+
+    int q;
+    cin >> q;
+
+    // precomputation starts from here
+    // fist we are assuming that the query range is from 0 to 12. if the problem gives another range we have to declare hash array/table accordingly
+    int hash[13] = {0}; // 12 + 1
+    for(int i = 0; i < n; i++) {
+        hash[arr[i]] += 1;
+    }
+
+    while(q--) {
+        int number;
+        cin >> number; 
+        // fetching start from here
+        cout << hash[number] << endl;
+    }
 
     return 0;
 }
