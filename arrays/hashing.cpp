@@ -56,5 +56,13 @@ int main() {
         cout << hash[number] << endl;
     }
 
+    // now the problem is that an integer array size can be <= 10^9 (nearly) inside main function
+    // and we cannot declare it more than that size so if we do that the code will throw segmentation fault/error
+    // so to solve this we can declare it as a global array and we get a option to get an array of size nearly 10^7
+
+    // for an boolean array this size is 10^7 inside main function
+    // and 10^8 globally
+
+
     return 0;
 }
