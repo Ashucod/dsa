@@ -9,19 +9,34 @@ int main() {
     string s;
     cin >> s;
 
-    // precompute
-    int hash[26] = {0};
+    // // precompute
+    // int hash[26] = {0};
+    // for(int i = 0; i < s.size(); i++) {
+    //     hash[(s[i] - 'a')] += 1;
+    // }
+
+    // // query
+    // int q;
+    // cin >> q;
+    // while(q--){
+    //     char c;
+    //     cin >> c;
+    //     cout << hash[(c-'a')] << endl;
+    // }
+
+    // Now this was only for lowercase alphabets and now we will do this for all characters includeing digits, special characters, lowercase alphabets, uppercase alphabets
+    int hash[256] = {0};
     for(int i = 0; i < s.size(); i++) {
-        hash[(s[i] - 'a')] += 1;
+        hash[s[i]]++;
     }
 
-    // query
+    //query
     int q;
     cin >> q;
-    while(q--){
+    while(q--) {
         char c;
         cin >> c;
-        cout << hash[(c-'a')] << endl;
+        cout << hash[c] << endl;
     }
 
     return 0;
