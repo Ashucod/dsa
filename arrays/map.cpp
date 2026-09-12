@@ -62,6 +62,30 @@ int main() {
 
     // so map data structure uses less space, maps in sorted manner and doesnt have that query problem since we can declare the key data type to long or long long to get query as large as wish
 
+    // We can similarly perform character hashing using the map data structure.
+
+    // The total time complexity will be O(N * time taken by map data structure).
+
+    // Storing(i.e. insertion) and fetching(i.e. retrieval) in a C++ map, both take always O(logN) time complexity, where N = the size of the map. 
+
+    // But the unordered_map in C++ and HashMap in Java, both take O(1) time complexity to perform storing(i.e. insertion) and fetching(i.e. retrieval). Now, it is valid for the best case and the average case. 
+
+    // But in the worst case, this time complexity will be O(N) for unordered_map. Now, the worst case occurs very very rarely. It almost never happens and most of the time, we will be using unordered_map. 
+
+    // Note: Our first priority will be always to use unordered_map and then map. If unordered_map gives a time limit exceeded error(TLE), we will then use the map.
+
+    // The time complexity in the worst case is O(N) because of the internal collision.
+
+    // In order to understand collision properly, we need to understand the concept of how the hashing work with an optimized space.
+
+    // Hashing is done using several methods. Among them, the three most common ones are
+    // Division method
+    // Folding method
+    // Mid-Square method
+
+    // we are interested in division method:
+    
+
     
     return 0;
 }
