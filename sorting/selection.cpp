@@ -29,5 +29,7 @@ int main() {
         cout << arr[i] << " ";
     }
     cout << endl;
+
+    // Time complexity = O(n^2)
     return 0;
 }
